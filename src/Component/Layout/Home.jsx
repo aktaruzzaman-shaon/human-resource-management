@@ -6,7 +6,7 @@ const Home = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data) => console.log(data);
-
+   
 
     return (
 
@@ -19,6 +19,8 @@ const Home = () => {
 
                 {/* react hook form for login and signup */}
                 <form onSubmit={handleSubmit(onSubmit)}>
+
+                    <input {...register("name")} placeholder='name' type='text' className='input input-bordered input-lg w-full max-w-xs mt-5 bg-slate-100' /><br></br>
 
                     <input {...register("Mail")} placeholder='mail' type='text' className='input input-bordered input-lg w-full max-w-xs my-5 bg-slate-100' /><br></br>
 

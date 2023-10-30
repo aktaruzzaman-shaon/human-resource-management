@@ -1,11 +1,14 @@
 import './App.css'
 import Layout from './Component/Layout/Layout'
+import { AuthProvider } from './contexts/AuthContext'
 
 function App() {
 
   return (
     <>
-      <Layout></Layout>
+      <AuthProvider>
+        <Layout></Layout>
+      </AuthProvider>
     </>
   )
 }
